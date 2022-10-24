@@ -7,7 +7,7 @@ with open('requirements.txt', 'r', encoding='utf-8') as f:
     requirements = f.readlines()
 
 setuptools.setup(
-    name="ppocr-onnx",
+    name="v-ppocr-onnx",
     version="0.0.3.8",
     author="triwinds",
     author_email="triwinds@foxmail.com",
