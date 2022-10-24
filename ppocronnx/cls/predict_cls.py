@@ -23,7 +23,7 @@ from ppocronnx.utility import get_model_data
 from .postprocess import ClsPostProcess
 
 logger = logging
-model_file = 'cls-model.onnx'
+model_file = 'ch_ppocr_mobile_v2.0_cls_infer_model.onnx'
 
 
 class TextClassifier(object):
