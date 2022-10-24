@@ -30,8 +30,8 @@ rec_model_file = 'ch_PP-OCRv3_rec_infer.onnx'
 class TextRecognizer(object):
     def __init__(self, rec_model_path=None, ort_providers=None):
         if ort_providers is None:
-            ort_providers = ['CPUExecutionProvider']
-        self.rec_image_shape = [3, 32, 320]
+            ort_providers = ['TensorrtExecutionProvider', 'CUDAExecutionProvider', 'CPUExecutionProvider']
+        self.rec_image_shape = [3, 48, 320]
         self.character_type = 'ch'
         self.rec_batch_num = 6
         self.rec_algorithm = 'CRNN'

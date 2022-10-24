@@ -50,7 +50,7 @@ def transform(data, ops=None):
 class TextDetector(object):
     def __init__(self, box_thresh=0.6, unclip_ratio=1.6, det_model_path=None, ort_providers=None):
         if ort_providers is None:
-            ort_providers = ['CPUExecutionProvider']
+            ort_providers = ['TensorrtExecutionProvider', 'CUDAExecutionProvider', 'CPUExecutionProvider']
         self.det_algorithm = 'DB'
         self.box_thresh = box_thresh
         self.unclip_ratio = unclip_ratio

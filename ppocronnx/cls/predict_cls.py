@@ -29,7 +29,7 @@ model_file = 'ch_ppocr_mobile_v2.0_cls_infer_model.onnx'
 class TextClassifier(object):
     def __init__(self, label_list=('0', '180'), cls_batch_num=6, cls_thresh=0.9, ort_providers=None):
         if ort_providers is None:
-            ort_providers = ['CPUExecutionProvider']
+            ort_providers = ['TensorrtExecutionProvider', 'CUDAExecutionProvider', 'CPUExecutionProvider']
         self.cls_image_shape = [3, 48, 192]
         self.cls_batch_num = cls_batch_num
         self.cls_thresh = cls_thresh
